@@ -15,12 +15,11 @@
 		<h2>Run the optimizer</h2>
 		<code>
 			r.js.cmd -o .\build.js
-		<code>
-		
+		</code>
 
 		<nav class="nav" id="nav">
 			<h2>Navigation modules</h2>
-		</nav>        
+		</nav>
 		
 		 <div class="large-img" id="large-img">
 			 <h2>Large Img module</h2>
@@ -28,17 +27,10 @@
 
 		<script src="scripts/common.js"></script>
 
-		<script src="scripts/app/account-page.js"></script>
 		<script>
 			require(["common"], function(){
-				require(["account-page"]);
-			});
-		</script>
-
-		<script src="scripts/app/pip-page.js"></script>
-		<script>
-			require(["common"], function(){
-				require(["pip-page"]);
+				require(["app/account-page"]);
+				require(["app/pip-page"]);
 			});
 		</script>
 	</body>

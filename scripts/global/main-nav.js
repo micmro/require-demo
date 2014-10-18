@@ -9,5 +9,7 @@ define(["lib/jquery.pluginA", "lib/jquery.pluginB"], function(require) {
 
     };
 
+    console.log("global/main-nav.js loaded and dependencies executed");
+
     return MainNav;
 });

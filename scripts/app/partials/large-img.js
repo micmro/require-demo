@@ -9,5 +9,7 @@ define(["jquery"], function($) {
 
     };
 
+    console.log("app/partials/large-img.js loaded and dependencies executed");
+
     return PipPage;
 });

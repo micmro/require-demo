@@ -1,7 +1,6 @@
 require-demo
 ============
-Demo of using require in a multi-page app (a global and 0-n secondary entry files). It also loads the files as `<script>` tags to optimize for the browsers lookahead preloader.
-
+Demo of using require in a multi-page app (a global and 0-n secondary entry files).
 
 Setup demo server and tools
 ---------------------------
