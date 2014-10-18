@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/site.css">
+		<script src="scripts/lib/require.js"></script>
+
+	</head>
+	<body>
+
+		<h1>Require Demo</h1>
+
+
+		<h2>Run the optimizer</h2>
+		<code>
+			r.js.cmd -o .\build.js
+		<code>
+		
+
+		<nav class="nav" id="nav">
+			<h2>Navigation modules</h2>
+		</nav>        
+		
+		 <div class="large-img" id="large-img">
+			 <h2>Large Img module</h2>
+		 </div>
+
+		<script src="scripts/common.js"></script>
+
+		<script src="scripts/app/account-page.js"></script>
+		<script>
+			require(["common"], function(){
+				require(["account-page"]);
+			});
+		</script>
+
+		<script src="scripts/app/pip-page.js"></script>
+		<script>
+			require(["common"], function(){
+				require(["pip-page"]);
+			});
+		</script>
+	</body>
+</html>
+
