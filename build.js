@@ -15,14 +15,16 @@
 		{ 
 			name: "app/pip-page"
 		}
-	]
-	// ,
-	//  onBuildRead: function (moduleName, path, contents) {
-	//  	//remove the id from the module for the optimizer
-	//  	//this is just Prove of concept - it won't work with commas
-	//  	var reEx =  new RegExp("^[ ]*define\\([ \\n\\r\\t]*['\"]"+moduleName+"['\"][ ]*,[ ]*");
-
-	//  	console.log(moduleName);
-	//  	return contents.replace(reEx,"xdefine(");
-	//  }
+	],
+	onBuildWrite: function (moduleName, path, contents) {
+		// This is where the magic happens:
+		/// append ";require(["moduleName"]);" to all entry modules
+		// - this has the same result as adding insertRequire["moduleName"] to all modules
+		for (var i = 0, len = config.modules.length; i < len; i++) {
+			if(config.modules[i].name === moduleName){
+				return  contents + ";require([\""+moduleName+"\"]);"
+			};
+		}
+		return contents
+	},	
 })

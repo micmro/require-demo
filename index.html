@@ -26,18 +26,29 @@
 		 </div>
 
 		<script>
-		require.config({
-		baseUrl: "scripts",
-		paths: {
-			jquery: "lib/jquery"
-		}
-	});
-			
+			//require conf
+			require.config({
+				baseUrl: "scripts",
+				//baseUrl: "optim-output", //works with the optimized files as well
+				paths: {
+					jquery: "lib/jquery"
+				}
+			});
+
+			//load files via require - this is not picked up by the pre-loader
 			require(["common"], function(){
 				require(["app/account-page"]);
 				require(["app/pip-page"]);
 			});
 		</script>
+
+		<!-- only workd with optimized files - could be switched in your build step -->
+		<!--
+		<script src="optim-output/common.js"></script>
+		<script src="optim-output/app/account-page.js"></script>
+		<script src="optim-output/app/pip-page.js"></script>
+		-->
+
 	</body>
 </html>
 
