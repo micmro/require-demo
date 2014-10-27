@@ -26,7 +26,7 @@ module.exports = function( grunt ) {
 		connect: {
 			all: {
 				options:{
-					port: 9000,
+					port: 8000,
 					hostname: "0.0.0.0",
 					middleware: function(connect, options) {
 						return [

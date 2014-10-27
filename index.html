@@ -25,9 +25,14 @@
 			 <h2>Large Img module</h2>
 		 </div>
 
-		<script src="scripts/common.js"></script>
-
 		<script>
+		require.config({
+		baseUrl: "scripts",
+		paths: {
+			jquery: "lib/jquery"
+		}
+	});
+			
 			require(["common"], function(){
 				require(["app/account-page"]);
 				require(["app/pip-page"]);
