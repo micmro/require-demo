@@ -34,7 +34,7 @@ Performance optimization
 I've added a `onBuildWrite` step into the build configuration (`build.js`) that allows to load the optimized require module as a `<scrip>` tag - this allows the preload-parser to start downloading the file earlier. So instead of nesting them in `require([], nextStage)` calls you can add them after each other in at the bottom of the document.
 
 ``` Javascript
-requirejs.config({
+({
 	...
 	onBuildWrite: function (moduleName, path, contents) {
 		// This is where the magic happens:
